@@ -1,0 +1,119 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out; /* Smooth transition for all elements */
+  }
+  
+  body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    color: #000; /* Black text by default */
+    background-color: #fff; /* White background */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Header with subtle shadow for depth */
+  
+  /* Line 21-25, code snippet sets the background color of the header element to black, making it visually distinct from the rest of the page. The text color is set to white, ensuring good contrast against the black background. Padding is added to create spacing around the content within the header. Finally, a box shadow is applied to give the header a subtle shadow effect, adding depth to the design. */
+  
+  header { 
+    background-color: #000; 
+    color: #fff; /* White text */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+/* Remove unnecessary closing curly brace */
+  
+  /* Sticky Navigation */
+
+  /* line 36-67,explanation The nav element is styled using flexbox layout, with items centered horizontally. It has a red background color, 10 pixels of padding at the top and bottom, and is positioned as a sticky navigation at the top of the page. It has a high z-index to ensure it stays on top of other elements.
+  The nav a selector styles the anchor tags within the navigation bar. It sets the text color to white, removes the underline, and makes the text bold.
+  The .hero class styles the hero section of the webpage. It has a gradient background that goes from green to black, white text color, 100 pixels of padding at the top and bottom, and is centered horizontally.
+  The .main-content class styles the main content area using CSS grid. It sets the display to grid, with columns that automatically fit the available space and have a minimum width of 300 pixels. There is a 20 pixel gap between grid items, and 20 pixels of padding around the content. */
+  
+
+  nav {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between items */
+    background-color: #FF0000; /* Red */
+    padding: 10px 0;
+    position: sticky;/* Sticky navigation */
+    top: 0;/* Stick to the top */
+    z-index: 1000;/* Stay on top of other elements */
+  }
+  
+  nav a {
+    color: #fff; /* White text */
+    text-decoration: none;/* Remove underline */
+    font-weight: bold;/* Bold text */
+  }
+  
+  /* Hero Section with gradient background */
+  .hero {/* Hero section */
+    background: linear-gradient(135deg, #008000 0%, #000 100%); /* Green to black gradient */
+    color: #fff; /* White text */
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  /* Main Content Area Using Grid */
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Enhance Footer */
+  footer {
+    background-color: #000; /* Black */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design Enhancements */
+  @media only screen and (max-width: 1440px) { /* Adjustments for MacBook screens */
+    .hero { padding: 80px 10px; }
+    nav { gap: 10px; }
+  }
+  
+  @media only screen and (max-width: 1024px) { /* Adjustments for Chromebook screens */
+    .main-content { grid-template-columns: 1fr; }
+  }
+  
+  @media only screen and (max-width: 428px) { /* Adjustments for iPhone screens */
+    body { font-size: 10px; }
+  }
+  
+  @media only screen and (max-width: 460px) { /* Adjustments for future iPhone screens */
+    nav a { font-size: 10px; }
+  }
+  
+  @media only screen and (min-width: 360px) and (max-width: 760px) { /* Adjustments for Samsung screens */
+    .hero { padding: 50px 20px; }
+  }
+  
+  /* Adding interactive elements */
+  a:hover, nav a:hover, footer a:hover {
+    transform: scale(1.1);
+    color: #FFD700; /* Gold color on hover */
+  }
+  
+  /* Advanced UI Feature: Dark Mode Toggle */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212; /* Dark mode background */
+      color: #E0E0E0; /* Light text for dark mode */
+    }
+    header, footer {
+      background-color: #333;
+    }
+    nav {
+      background-color: #444;
+    }
+  }
+  }
